@@ -9,6 +9,7 @@ export default function App() {
       <Text>Test branch</Text>
       <Text>Endnu en test</Text>
       <Text>Test 1</Text>
+      <Text>Hej med jer</Text>
     </View>
   );
 }
