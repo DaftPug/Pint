@@ -1,21 +1,41 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text, TextInput, StyleSheet, ImageBackground } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app, det er super!</Text>
-      <Text>TEST</Text>
-      <Text>Test branch</Text>
-    </View>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      imageSource: './assets/walkforest.jpg'
+    };
+  }
+
+
+  render() {
+    return (
+      <ImageBackground source={require('./assets/walkforest.jpg')} style={styles.welcomeScreen}> 
+
+        <Text style={styles.textStyle}> On My Way</Text>
+      </ImageBackground>
+    );
+  }
 }
-
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  welcomeScreen: {
+    height: '100%',
+    width:'100%',
   },
+
+  textStyle: {
+    fontSize: 50,
+    fontWeight: 'bold',
+    color: 'white',
+    textAlign: 'center',
+//    position: 'absolute',
+    top: '30%',
+
+
+  },
+  
+  // CSS flexbox > flexbox froggy
+  
 });
